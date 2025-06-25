@@ -36,7 +36,13 @@ https://onlinestudyroom-all.web.app/
 - tailwindcss + daisy UI
 
 
-
+## How to Run Locally:
+- Download or clone the repo
+- Open with VS Code.
+- Navigate to the file.
+- Handle .env variables
+- Run : npm i
+- Run : npm run dev
 
 
 
