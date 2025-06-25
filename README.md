@@ -20,6 +20,13 @@ https://onlinestudyroom-all.web.app/
 ![Image](https://github.com/user-attachments/assets/ce8c61b1-e47c-4b0c-8ca8-79c0a8b36b6c)
 ![Image](https://github.com/user-attachments/assets/51123157-62a0-4d3d-8b14-42baa59efd29)
 
+# Technologies
+- HTML, CSS
+- Tailwind + Daisy UI
+- React JS
+- Firebase
+- Node JS + Express JS
+
 # NPM Packages:
 - Firebase 
 - Firbase admin SDK
