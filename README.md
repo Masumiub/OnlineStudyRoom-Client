@@ -10,7 +10,16 @@ https://onlinestudyroom-all.web.app/
  - Track Submissions: Users can view all their attempted assignments, scores, and feedback in one organized dashboard.
  - Secure Login with Firebase: We use Firebase Authentication to ensure only verified users can access and interact with the platform.
  - Search & Sort Assignments: Search & sort aasignmnts by level of difficulty.
- - User Friendly UI with Dark Mood: This app comes with User Friendly UI with Dark Mood.
+
+# Frontend:
+ - React JS
+ - Firebase
+ - Tailwind CSS + Daisy UI
+
+# Backend:
+- Node JS
+- Express JS
+- JWT
 
 # NPM Packages:
 - Firebase 
