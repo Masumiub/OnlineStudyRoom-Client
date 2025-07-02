@@ -16,6 +16,11 @@ import AssignmentDetails from "../pages/AssignmentDetails/AssignmentDetails";
 import UpdateAssignment from "../pages/UpdateAssignment/UpdateAssignment";
 import Lottie from 'lottie-react';
 import loadingLottie from '../assets/Animation - Loading.json'
+import DashboardLayout from "../layout/DashboardLayout";
+import Stats from "../pages/Stats/Stats";
+import AllAssignments from "../pages/Assignments/AllAssignments";
+import MyProfile from "../pages/MyProfile/MyProfile";
+import UpdateProfile from "../pages/UpdateProfile/UpdateProfile";
 
 const router = createBrowserRouter([
     {
@@ -29,7 +34,7 @@ const router = createBrowserRouter([
         children: [
             {
                 index: true,
-                loader: ()=>fetch('https://online-study-room-server.vercel.app/latestAssignments?limit=3&sort=postedAt'),
+                loader: () => fetch('https://online-study-room-server.vercel.app/latestAssignments?limit=3&sort=postedAt'),
                 Component: Home
             },
             {
@@ -43,22 +48,8 @@ const router = createBrowserRouter([
                 element: <PrivateRoute> <AssignmentDetails></AssignmentDetails></PrivateRoute>,
             },
             {
-                path: '/createAssignment',
-                element: <PrivateRoute><CreateAssignment></CreateAssignment></PrivateRoute>
-            },
-            {
                 path: '/updateAssignment/:id',
-                //loader: ({ params }) => fetch(`https://online-study-room-server.vercel.app/assignments/${params.id}`),
                 element: <PrivateRoute> <UpdateAssignment></UpdateAssignment> </PrivateRoute>
-            },
-            {
-                path: '/myAttempted',
-                element: <PrivateRoute><MyAttempted></MyAttempted> </PrivateRoute>
-            },
-            {
-                path: '/pendingAssignments',
-                //loader: ()=> fetch('https://online-study-room-server.vercel.app/pendings'),
-                element: <PrivateRoute> <PendingAssignments></PendingAssignments></PrivateRoute>
             },
             {
                 path: '/login',
@@ -75,6 +66,55 @@ const router = createBrowserRouter([
             }
         ]
     },
+
+    {
+        path: "/dashboard",
+        Component: DashboardLayout,
+        errorElement: <ErrorPage></ErrorPage>,
+        hydrateFallbackElement: <div className="flex flex-col mx-auto justify-center h-screen">
+            <div className="mx-auto"><Lottie className="w-[200px] md:w-[300px] lg:w-[400px] mx-auto" animationData={loadingLottie} loop={true} ></Lottie></div>
+            <div><p className="text-center text-4xl mt-5">Loading...</p></div>
+        </div>,
+        children: [
+            {
+                index: true,
+                loader: ()=>fetch('https://online-study-room-server.vercel.app/assignments'),
+                Component: Stats
+            },
+            {
+                path: 'allAssignment',
+                element: <PrivateRoute> <AllAssignments></AllAssignments> </PrivateRoute>
+            },
+            {
+                path: 'assignmentDetails/:id',
+                element: <PrivateRoute> <AssignmentDetails></AssignmentDetails></PrivateRoute>,
+            },
+            {
+                path: 'createAssignment',
+                element: <PrivateRoute><CreateAssignment></CreateAssignment></PrivateRoute>
+            },
+            {
+                path: 'updateAssignment/:id',
+                element: <PrivateRoute> <UpdateAssignment></UpdateAssignment> </PrivateRoute>
+            },
+            {
+                path: 'myAttempted',
+                element: <PrivateRoute><MyAttempted></MyAttempted> </PrivateRoute>
+            },
+            {
+                path: 'pendingAssignments',
+                element: <PrivateRoute> <PendingAssignments></PendingAssignments></PrivateRoute>
+            },
+            {
+                path: 'myProfile',
+                element: <PrivateRoute> <MyProfile></MyProfile></PrivateRoute>
+            },
+            {
+                path: 'updateProfile',
+                element: <PrivateRoute> <UpdateProfile></UpdateProfile></PrivateRoute>
+            },
+        ]
+    }
 ]);
 
 export default router;

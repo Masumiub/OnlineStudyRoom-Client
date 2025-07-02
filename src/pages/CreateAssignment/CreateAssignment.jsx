@@ -107,12 +107,12 @@ const CreateAssignment = () => {
         <div>
             <div className='text-center bg-gradient-to-r from-blue-700 to-pink-600 text-white banner rounded-b-4xl'>
                 <Fade>
-                    <h2 className='font-bold text-5xl pt-40 pb-20'>Create Assigment</h2>
+                    <h2 className='font-bold text-5xl pt-20 pb-20'>Create Assigment</h2>
                 </Fade>
             </div>
 
 
-            <div className='mx-auto p-3 w-full md:max-w-xl mt-10 mb-20'>
+            <div className='mx-auto p-3 w-full md:max-w-5xl mt-10 mb-20'>
                 <Fade>
                     <form onSubmit={handleCreateAssignment}>
                         <fieldset className="fieldset bg-base-200 border-base-300 rounded-box border p-4">

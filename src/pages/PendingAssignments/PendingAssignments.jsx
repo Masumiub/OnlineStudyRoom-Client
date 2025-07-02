@@ -117,10 +117,10 @@ const PendingAssignments = () => {
     return (
         <div>
             <div className='text-center bg-gradient-to-r from-red-600 to-indigo-500 text-white rounded-b-4xl'>
-                <h2 className='font-bold text-5xl pt-40 pb-20'>Pending Assignments</h2>
+                <h2 className='font-bold text-5xl pt-20 pb-20'>Pending Assignments</h2>
             </div>
 
-            <div className='mx-auto p-3 w-full md:max-w-5xl mt-10 mb-20'>
+            <div className='mx-auto p-3 w-full mt-10 mb-20'>
                 <div className="overflow-x-auto">
                     <table className="table table-zebra">
                         <thead>

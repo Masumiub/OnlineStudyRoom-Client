@@ -105,7 +105,7 @@ const Navbar = () => {
 
                     <li><NavLink to='/assignments'>Assignments</NavLink></li>
 
-                    {
+                    {/* {
                         user ? <div className='flex'>
                             <li><NavLink to='/createAssignment'>Create Assignment</NavLink></li>
 
@@ -114,7 +114,7 @@ const Navbar = () => {
                             <li><NavLink to='/pendingAssignments'>Pending Assignments</NavLink></li>
                         </div> : <></>
 
-                    }
+                    } */}
                 </ul>
             </div>
             <div className="navbar-end gap-2">
@@ -155,8 +155,8 @@ const Navbar = () => {
                                 <p className='text-xl font-semibold'>{user.displayName}</p>
                                 <p>{user.email}</p>
                             </li>
-                            <li><NavLink to='/createAssignment' className='btn btn-primary'>Create Assignment</NavLink></li>
-                            <li> <NavLink to='/myAttempted' className='btn btn-info text-white mt-2'>My Attempted</NavLink> </li>
+                            <li><NavLink to='/dashboard' className='btn btn-primary'>Dashboard</NavLink></li>
+                            
                         </ul> </div> : <></>
                 }
                 {
