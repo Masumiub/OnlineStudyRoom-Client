@@ -127,7 +127,7 @@ const AssignmentDetails = () => {
                 <Fade triggerOnce><h2 className='font-bold text-5xl pt-40 pb-20'>Assignment Details</h2></Fade>
             </div>
 
-            <div className='mx-auto p-3 w-full md:max-w-4xl mt-10 mb-20'>
+            <div className='mx-auto p-3 w-full md:max-w-4xl mt-10 mb-20 min-h-screen'>
                 <Fade cascade triggerOnce>
 
                     <div className='flex flex-col md:flex-row gap-10 items-center'>

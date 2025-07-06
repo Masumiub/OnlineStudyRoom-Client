@@ -21,16 +21,6 @@ const Assignments = () => {
     const [searchTerm, setSearchTerm] = useState('');
     const [loading, setLoading] = useState(true);
 
-    /*
-    useEffect(() => {
-        if (selectedLevel === 'All') {
-            setFilteredAssignments(assignments);
-        }
-        else {
-            const filtered = assignments.filter(assign => assign.level === selectedLevel);
-            setFilteredAssignments(filtered);
-        }
-    }, [selectedLevel, assignments]);*/
 
 
     useEffect(() => {

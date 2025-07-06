@@ -80,16 +80,14 @@ const Navbar = () => {
                         tabIndex={0}
                         className="menu menu-sm dropdown-content bg-base-300 rounded-box z-1 mt-3 w-52 p-2 shadow">
                         <li><NavLink to='/'>Home</NavLink></li>
-
                         <li><NavLink to='/assignments'>Browse Assignments</NavLink></li>
-
+                        <li><NavLink to='/aboutUs'>About us</NavLink></li>
+                        <li><NavLink to='/contactUs'>Contact us</NavLink></li>
                         {
                             user ? <div>
-                                <li><NavLink to='/createAssignment'>Create Assignment</NavLink></li>
-
-                                <li><NavLink to='/myAttempted'>My Attempted</NavLink></li>
-
-                                <li><NavLink to='/pendingAssignments'>Pending Assignments</NavLink></li>
+                                <li><NavLink to='/dashboard/createAssignment'>Create Assignment</NavLink></li>
+                                <li><NavLink to='/dashboard/myAttempted'>My Attempted</NavLink></li>
+                                <li><NavLink to='/dashboard/pendingAssignments'>Pending Assignments</NavLink></li>
                             </div> : <></>
 
                         }
@@ -102,22 +100,16 @@ const Navbar = () => {
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
                     <li><NavLink to='/'>Home</NavLink></li>
-
                     <li><NavLink to='/assignments'>Assignments</NavLink></li>
-
-                    {/* {
-                        user ? <div className='flex'>
-                            <li><NavLink to='/createAssignment'>Create Assignment</NavLink></li>
-
-                            <li><NavLink to='/myAttempted'>My Attempted</NavLink></li>
-
-                            <li><NavLink to='/pendingAssignments'>Pending Assignments</NavLink></li>
-                        </div> : <></>
-
-                    } */}
+                    <li><NavLink to='/aboutUs'>About us</NavLink></li>
+                    <li><NavLink to='/contactUs'>Contact us</NavLink></li>
                 </ul>
             </div>
             <div className="navbar-end gap-2">
+                {
+                    user ? <NavLink to='/dashboard' className='btn btn-primary'>Dashboard</NavLink> : ""
+                }
+                
 
                 <label className="swap swap-rotate">
                     {/* this hidden checkbox controls the state */}
@@ -155,7 +147,6 @@ const Navbar = () => {
                                 <p className='text-xl font-semibold'>{user.displayName}</p>
                                 <p>{user.email}</p>
                             </li>
-                            <li><NavLink to='/dashboard' className='btn btn-primary'>Dashboard</NavLink></li>
                             
                         </ul> </div> : <></>
                 }

@@ -21,6 +21,8 @@ import Stats from "../pages/Stats/Stats";
 import AllAssignments from "../pages/Assignments/AllAssignments";
 import MyProfile from "../pages/MyProfile/MyProfile";
 import UpdateProfile from "../pages/UpdateProfile/UpdateProfile";
+import AboutUs from "../pages/AboutUs/AboutUs";
+import ContactUs from "../pages/ContactUs/ContactUs";
 
 const router = createBrowserRouter([
     {
@@ -39,12 +41,14 @@ const router = createBrowserRouter([
             },
             {
                 path: '/assignments',
-                //loader: ()=>fetch('https://online-study-room-server.vercel.app/assignments'),
                 Component: Assignments,
             },
             {
+                path: '/aboutUs',
+                Component: AboutUs
+            },
+            {
                 path: '/assignmentDetails/:id',
-                //loader: ({ params }) => fetch(`https://online-study-room-server.vercel.app/assignments/${params.id}`),
                 element: <PrivateRoute> <AssignmentDetails></AssignmentDetails></PrivateRoute>,
             },
             {
@@ -59,6 +63,10 @@ const router = createBrowserRouter([
                 path: '/register',
                 Component: Register
 
+            },
+            {
+                path: '/contactUs',
+                Component: ContactUs
             },
             {
                 path: '/error',

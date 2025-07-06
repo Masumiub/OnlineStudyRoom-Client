@@ -14,7 +14,7 @@ const Header = () => {
             <div className='flex flex-col justify-center items-center w-full md:w-7/12 mx-auto p-4 banner'>
 
                 <Fade>
-                <div className='text-center mt-20'>
+                <div className='text-center'>
                     <h2 className='font-bold text-4xl md:text-5xl lg:text-6xl'>Collaborate. Learn. Grow Together.</h2>
                     <p className='mt-4 text-sm'>Create and complete assignments with your study buddies in a shared learning space. Boost your learning with peer-reviewed assignments and real-time feedback. Every friend is a mentor in your academic journey.</p>
 
@@ -22,7 +22,7 @@ const Header = () => {
                 </div>
                 </Fade>
                 
-                <div className='mx-auto mt-15 scale-130'>
+                {/* <div className='mx-auto mt-15 scale-130'>
                     <div className="stats stats-vertical lg:stats-horizontal shadow">
                         <div className="stat text-center">
                             <div className="stat-title text-white">Assignments</div>
@@ -42,7 +42,7 @@ const Header = () => {
                             <div className="stat-desc text-white">↘︎ 90 (14%)</div>
                         </div>
                     </div>
-                </div>
+                </div> */}
 
                 <div className='mx-auto w-full md:w-6/12'>
                     <motion.img src={herobanner}
