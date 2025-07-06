@@ -6,6 +6,7 @@ import LatestAssignments from '../../components/LatestAssignments';
 import { useLoaderData } from 'react-router';
 import Newsletter from '../../components/Newsletter';
 import Testimonials from '../../components/Testimonials';
+import Counts from '../../components/Counts';
 
 const Home = () => {
 
@@ -15,11 +16,12 @@ const Home = () => {
         <div>
             <Header></Header>
             <div className='mx-auto w-full md:w-8/12'>
-            <LatestAssignments assignments={assignments}></LatestAssignments>
-            <Features></Features>
-            <Testimonials></Testimonials>
-            <FAQs></FAQs>
-            <Newsletter></Newsletter>
+                <LatestAssignments assignments={assignments}></LatestAssignments>
+                <Features></Features>
+                <Counts></Counts>
+                <Testimonials></Testimonials>
+                <FAQs></FAQs>
+                <Newsletter></Newsletter>
             </div>
         </div>
     );

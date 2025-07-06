@@ -1,18 +1,19 @@
 import React from 'react';
+import { Slide } from 'react-awesome-reveal';
 import { FiCommand } from "react-icons/fi";
 
 
 const Testimonials = () => {
     return (
         <div>
-            <section className="dark:bg-gray-100 dark:text-gray-800">
-                <div className="py-12 mx-auto">
+            <section className="">
+                <div className="pb-12 mx-auto">
 
                     <div className="grid items-center gap-4 xl:grid-cols-5">
 
                         <div className="mx-auto my-8 space-y-4 text-center xl:col-span-2 xl:text-left p-3">
-                            <h2 className="text-5xl ">What <span className='font-semibold text-purple-500'>Our Students</span> Say</h2>
-                            <p className="dark:text-gray-600">
+                            <h2 className="text-5xl ">What <span className='font-semibold text-violet-500'>Our Students</span> Say</h2>
+                            <p className="">
                                 Our users love how Online Study Room helps them stay organized, collaborate with friends, and improve their academic performance.
                             </p>
                         </div>
@@ -21,8 +22,8 @@ const Testimonials = () => {
                             <div className="grid gap-4 md:grid-cols-2">
                                 <div className="grid content-center gap-4">
 
-
-                                    <div className="px-6 py-12 rounded-2xl shadow-lg bg-base-100">
+                                    <Slide direction='right' cascade> 
+                                    <div className="px-6 py-12 rounded-2xl shadow-lg bg-base-200">
                                         <FiCommand size={35} />
                                         <p className='mt-3'>
                                             "The assignment sharing feature is a game changer! I can easily send my work to friends and get their feedback. It’s like having a study group in my pocket. I’ve tried other tools, but this one feels built for students. It’s clean, fast, and actually helps with learning — not just managing tasks."
@@ -38,7 +39,7 @@ const Testimonials = () => {
                                     </div>
 
 
-                                    <div className="px-6 py-12 rounded-2xl shadow-lg bg-base-100">
+                                    <div className="px-6 py-12 rounded-2xl shadow-lg bg-base-200">
                                         <FiCommand size={35} />
                                         <p className='mt-3'>
                                             "Peer grading really motivates me to do better. I get helpful reviews from classmates, and I also learn from reviewing their work. This platform keeps me on track. The submission tracker is super helpful during finals week when everything gets chaotic."
@@ -52,13 +53,14 @@ const Testimonials = () => {
                                             </div>
                                         </div>
                                     </div>
+                                    </Slide>
 
                                 </div>
 
                                 <div className="grid content-center gap-4">
 
 
-                                    <div className="px-6 py-12 rounded-2xl shadow-lg bg-base-100">
+                                    <div className="px-6 py-12 rounded-2xl shadow-lg bg-base-200">
                                         <FiCommand size={35} />
                                         <p className='mt-3'>
                                              "This platform keeps me on track. The submission tracker is super helpful during finals week when everything gets chaotic."
@@ -74,7 +76,7 @@ const Testimonials = () => {
                                     </div>
 
 
-                                    <div className="px-6 py-12 rounded-2xl shadow-lg bg-base-100">
+                                    <div className="px-6 py-12 rounded-2xl shadow-lg bg-base-200">
                                         <FiCommand size={35} />
                                         <p className='mt-3'>
                                               "I’ve tried other tools, but this one feels built for students. It’s clean, fast, and actually helps with learning — not just managing tasks."
