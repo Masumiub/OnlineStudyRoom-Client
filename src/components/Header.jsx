@@ -22,29 +22,8 @@ const Header = () => {
                 </div>
                 </Fade>
                 
-                {/* <div className='mx-auto mt-15 scale-130'>
-                    <div className="stats stats-vertical lg:stats-horizontal shadow">
-                        <div className="stat text-center">
-                            <div className="stat-title text-white">Assignments</div>
-                            <div className="stat-value"><CountUp end={31} duration={5} />k</div>
-                            <div className="stat-desc text-white">Jan 1st - Feb 1st</div>
-                        </div>
 
-                        <div className="stat text-center">
-                            <div className="stat-title text-white">New Students</div>
-                            <div className="stat-value"><CountUp end={4200} duration={5} /></div>
-                            <div className="stat-desc text-white">↗︎ 400 (22%)</div>
-                        </div>
-
-                        <div className="stat text-center">
-                            <div className="stat-title text-white">New Study Topics</div>
-                            <div className="stat-value"><CountUp end={1200} duration={5} /></div>
-                            <div className="stat-desc text-white">↘︎ 90 (14%)</div>
-                        </div>
-                    </div>
-                </div> */}
-
-                <div className='mx-auto w-full md:w-6/12'>
+                <div className='mx-auto w-full md:w-5/12'>
                     <motion.img src={herobanner}
                         animate={{ y: [100, 150, 100] }}
                         transition={{ duration: 5, repeat: Infinity }}

@@ -36,7 +36,7 @@ const router = createBrowserRouter([
         children: [
             {
                 index: true,
-                loader: () => fetch('https://online-study-room-server.vercel.app/latestAssignments?limit=3&sort=postedAt'),
+                loader: () => fetch('https://online-study-room-server.vercel.app/latestAssignments?limit=4&sort=postedAt'),
                 Component: Home
             },
             {
@@ -49,7 +49,7 @@ const router = createBrowserRouter([
             },
             {
                 path: '/assignmentDetails/:id',
-                element: <PrivateRoute> <AssignmentDetails></AssignmentDetails></PrivateRoute>,
+                element: <PrivateRoute><AssignmentDetails></AssignmentDetails></PrivateRoute> ,
             },
             {
                 path: '/updateAssignment/:id',

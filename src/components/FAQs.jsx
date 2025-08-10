@@ -6,7 +6,7 @@ const FAQs = () => {
         <div className='my-20'>
             <div className='flex flex-col md:flex-row gap-10 p-5'>
                 <div className='w-full md:w-4/12'>
-                    <h2 className='text-5xl'>Frequently <span className='text-violet-500 font-bold'>Asked Questions</span></h2>
+                    <h2 className='text-3xl lg:text-5xl'>Frequently <span className='text-violet-500 font-bold'>Asked Questions</span></h2>
                 </div>
 
                 <div className='w-full md:w-8/12'>

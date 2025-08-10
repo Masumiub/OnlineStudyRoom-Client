@@ -7,6 +7,7 @@ import { useLoaderData } from 'react-router';
 import Newsletter from '../../components/Newsletter';
 import Testimonials from '../../components/Testimonials';
 import Counts from '../../components/Counts';
+import { Fade } from 'react-awesome-reveal';
 
 const Home = () => {
 
@@ -14,8 +15,10 @@ const Home = () => {
 
     return (
         <div>
+            <Fade>
             <Header></Header>
-            <div className='mx-auto w-full md:w-8/12'>
+            </Fade>
+            <div className='mx-auto w-full md:w-10/12'>
                 <LatestAssignments assignments={assignments}></LatestAssignments>
                 <Features></Features>
                 <Counts></Counts>

@@ -53,20 +53,20 @@ const AssignmentCard = ({ assignment, handleDeleteAssignment }) => {
                     <div className="flex flex-col md:flex-row gap-2 justify-between">
                         <div><p className='text-2xl'>Mark: {marks}</p></div>
 
-                        <div><NavLink className="btn btn-primary" to={`/assignmentDetails/${_id}`}>View Details →</NavLink></div>
+                        <div><NavLink className="btn btn-primary btn-sm" to={`/assignmentDetails/${_id}`}>View Details →</NavLink></div>
                     </div>
                     <div >
                         {
                             user ? (
                                 isAuthor ? (
                                     <div className='flex flex-col md:flex-row gap-2 p-1'>
-                                        <NavLink className='btn btn-dash w-full md:w-1/2' to={`/updateAssignment/${_id}`}><MdOutlineEditNote size={20} /> Edit</NavLink>
-                                        <button className='btn btn-error text-white  w-full md:w-1/2' onClick={() => handleDeleteAssignment(_id)}><RiDeleteBin6Line />Delete</button>
+                                        <NavLink className='btn btn-dash w-full md:w-1/2 btn-sm' to={`/updateAssignment/${_id}`}><MdOutlineEditNote size={20} /> Edit</NavLink>
+                                        <button className='btn btn-error text-white  w-full md:w-1/2 btn-sm' onClick={() => handleDeleteAssignment(_id)}><RiDeleteBin6Line />Delete</button>
                                     </div>
                                 ) : (
                                     <div className='flex flex-col md:flex-row gap-2 p-1'>
-                                        <button className='btn btn-dash w-full md:w-1/2' disabled><MdOutlineEditNote size={20} /> Edit</button>
-                                        <button className='btn w-full md:w-1/2 bg-gray-300 text-gray-400' onClick={() =>notifyError()}><RiDeleteBin6Line />Delete</button>
+                                        <button className='btn btn-dash w-full md:w-1/2 btn-sm' disabled><MdOutlineEditNote size={20} /> Edit</button>
+                                        <button className='btn w-full md:w-1/2 bg-gray-300 text-gray-400 btn-sm' onClick={() =>notifyError()}><RiDeleteBin6Line />Delete</button>
                                     </div>
                                 )
                             ) : ""

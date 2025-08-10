@@ -45,7 +45,7 @@ const LatestAssignments = ({assignments}) => {
                 <h2 className='text-5xl'>Lastest <span className='text-violet-500 font-bold'>Assignments</span></h2>
             </div>
 
-            <div className='p-3 grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-5'>
+            <div className='p-3 grid grid-cols-1 md:grid-cols-1 lg:grid-cols-4 gap-5'>
                 {
                     allAssignments.map((assignment) => <Fade key={assignment._id} cascade triggerOnce><AssignmentCard assignment={assignment} handleDeleteAssignment={handleDeleteAssignment}></AssignmentCard></Fade>)
                 }
