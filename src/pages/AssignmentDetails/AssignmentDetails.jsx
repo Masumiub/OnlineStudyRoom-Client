@@ -11,6 +11,7 @@ import { useState } from 'react';
 import useAxiosSecure from '../../hooks/useAxiosSecure';
 import Lottie from 'lottie-react';
 import loadingLottie from '../../assets/Animation - Loading.json'
+import axios from 'axios';
 
 const AssignmentDetails = () => {
 
@@ -25,14 +26,15 @@ const AssignmentDetails = () => {
     useEffect(() => {
         if (!id) {
             navigate('/error', { replace: true });
+            return;
         }
-        if (!ready) return;
 
-        axiosSecure.get(`/assignments/${id}`)
+        axios.get(`https://online-study-room-server.vercel.app/assignments/${id}`)
             .then(res => setAssignment(res.data))
-            .catch(err => console.error(err));
+            .catch(err => console.error("Error fetching assignment:", err));
 
-    }, [id, navigate, ready, axiosSecure]);
+    }, [id, navigate]);
+
 
     if (!assignment) return <div className="flex flex-col mx-auto justify-center h-screen">
         <div className="mx-auto"><Lottie className="w-[200px] md:w-[300px] lg:w-[400px] mx-auto" animationData={loadingLottie} loop={true} ></Lottie></div>
@@ -68,7 +70,7 @@ const AssignmentDetails = () => {
         });
     };
 
-    const handleSubmission = async(e) => {
+    const handleSubmission = async (e) => {
         e.preventDefault();
 
         const form = e.target;
@@ -86,25 +88,6 @@ const AssignmentDetails = () => {
             postedAt: new Date(),
         }
 
-        /*       fetch(`https://online-study-room-server.vercel.app/submissions/${_id}`, {
-                   method: 'POST',
-                   headers: {
-                       'Content-Type': 'application/json'
-                   },
-                   body: JSON.stringify(newSubmission)
-               })
-                   .then(res => res.json())
-                   .then(data => {
-                       if (data.insertedId) {
-                           notifySuccess(`Your Submission for ${title} was submitted successfully!`);
-                           setTimeout(() => {
-                               navigate(`/assignments`)
-                           }, 1000);
-                       }
-                   })
-                   .catch(error => {
-                       notifyError(`Ooops! Submission was not completed, ${error}`)
-                   })*/
 
         try {
             const res = await axiosSecure.post(`/submissions/${assignment?._id}`, newSubmission);
@@ -131,7 +114,7 @@ const AssignmentDetails = () => {
                 <Fade cascade triggerOnce>
 
                     <div className='flex flex-col md:flex-row gap-10 items-center'>
-                        <div className='w-full md:w-8/12'>
+                        <div className='w-full md:w-10/12'>
                             <h2 className='font-semibold text-3xl'>{title}</h2>
                             <p className='mt-2 text-gray-500'>Posted By: {userName}</p>
                             <div className='mt-2 flex gap-1.5 items-center'>
@@ -151,7 +134,23 @@ const AssignmentDetails = () => {
                         <h2 className='font-semibold text-xl'>Details</h2>
                         <p className='mt-2 text-gray-500'>{description}</p>
 
-                        <button className='mt-5 btn btn-primary btn-lg' onClick={() => document.getElementById('my_modal_3').showModal()}>Take Assignment <IoCheckmarkSharp /></button>
+                        {/* <button className='mt-5 btn btn-primary btn-lg' onClick={() => document.getElementById('my_modal_3').showModal()}>Take Assignment <IoCheckmarkSharp /></button> */}
+
+                        {user ? (
+                            <button
+                                className='mt-5 btn btn-primary btn-lg'
+                                onClick={() => document.getElementById('my_modal_3').showModal()}
+                            >
+                                Take Assignment <IoCheckmarkSharp />
+                            </button>
+                        ) : (
+                            <button
+                                className='mt-5 btn btn-secondary btn-lg'
+                                onClick={() => navigate('/login')}
+                            >
+                                Login to Take Assignment
+                            </button>
+                        )}
                         <dialog id="my_modal_3" className="modal">
                             <div className="modal-box">
                                 <form method="dialog">

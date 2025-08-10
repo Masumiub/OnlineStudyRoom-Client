@@ -149,7 +149,7 @@ const Assignments = () => {
                 </div>
             </div>
 
-            <div className='mt-15 mx-auto w-full md:max-w-7xl p-3'>
+            <div className='mt-15 mx-auto w-full md:w-10/12 p-3'>
                 <div className='flex gap-2 items-center'>
                     <p className='text-xl'>Sort By Level: </p>
                     <select onChange={handleSortChange} value={selectedLevel} className="select w-45" name='level'>
@@ -162,7 +162,7 @@ const Assignments = () => {
 
             </div>
 
-            <div className='mt-15 mb-20 mx-auto p-3 w-full md:max-w-7xl grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
+            <div className='mt-15 mb-20 mx-auto p-3 w-full md:w-10/12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
                 {
                     loading ? (<div className="flex flex-col mx-auto justify-center col-span-full">
                         <div className="mx-auto"><Lottie className="w-[200px] md:w-[300px] lg:w-[400px] mx-auto" animationData={loadingLottie} loop={true} ></Lottie></div>
