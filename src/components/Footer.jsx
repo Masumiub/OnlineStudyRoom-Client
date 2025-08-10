@@ -44,7 +44,7 @@ const Footer = () => {
                     <h6 className="footer-title">Legal</h6>
                     <NavLink to='/aboutUs' className="link link-hover">About us</NavLink>
                     <NavLink to='/contactUs' className="link link-hover">Contact us</NavLink>
-                    <a className="link link-hover">Privacy policy</a>
+                    {/* <a className="link link-hover">Privacy policy</a> */}
                     
                 </nav>
 
@@ -63,10 +63,10 @@ const Footer = () => {
 
                     <p className='footer-title mt-4'>Follow Us:</p>
                     <div className='flex gap-2'>
-                        <FaFacebook size={20} />
-                        <FaGoogle size={20} />
-                        <LuInstagram size={20} />
-                        <FaTwitter size={20} />
+                       <a href="https://www.facebook.com/"><FaFacebook size={20} /></a> 
+                       <a href="https://www.google.com/"><FaGoogle size={20} /></a> 
+                       <a href="https://www.google.com/"><LuInstagram size={20} /></a> 
+                       <a href="https://www.x.com/"> <FaTwitter size={20} /></a>
                     </div>
                 </nav>
             </footer>
